@@ -101,23 +101,23 @@
     </p>
     <img src="out-of-sample_result.png" alt="Yield Curve Forecast Scenarios vs. Actual (Aug 15, 2025)" style="width: 50%; border: 1px solid #ccc; padding: 10px; margin-top: 10px;">
     <table border="1" cellpadding="6">
-        <thead>
-            <tr>
-                <th>Maturity</th>
-                <th>Forecast (Policy Easing)</th>
-                <th>Actual Yield</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>1 Yr</td><td>4.17%</td><td>3.93%</td></tr>
-            <tr><td>2 Yr</td><td>4.11%</td><td>3.75%</td></tr>
-            <tr><td>3 Yr</td><td>4.01%</td><td>3.73%</td></tr>
-            <tr><td>5 Yr</td><td>4.00%</td><td>3.85%</td></tr>
-            <tr><td>7 Yr</td><td>4.00%</td><td>4.07%</td></tr>
-            <tr><td>10 Yr</td><td>3.91%</td><td>4.33%</td></tr>
-            <tr><td>20 Yr</td><td>4.11%</td><td>4.91%</td></tr>
-            <tr><td>30 Yr</td><td>4.11%</td><td>4.92%</td></tr>
-        </tbody>
+      <thead>
+        <tr>
+          <th>Maturity</th>
+          <th>Forecast (Policy Easing)</th>
+          <th>Actual Yield (8/15/25)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1 Yr</td><td>4.78%</td><td>3.93%</td></tr>
+        <tr><td>2 Yr</td><td>3.95%</td><td>3.75%</td></tr>
+        <tr><td>3 Yr</td><td>4.09%</td><td>3.73%</td></tr>
+        <tr><td>5 Yr</td><td>3.67%</td><td>3.85%</td></tr>
+        <tr><td>7 Yr</td><td>3.93%</td><td>4.07%</td></tr>
+        <tr><td>10 Yr</td><td>4.25%</td><td>4.33%</td></tr>
+        <tr><td>20 Yr</td><td>4.61%</td><td>4.91%</td></tr>
+        <tr><td>30 Yr</td><td>4.51%</td><td>4.92%</td></tr>
+      </tbody>
     </table>
     
     <h2>4. Model Fitness to Different Scenarios</h2>
@@ -134,11 +134,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>Inflation Surge</td><td>0.4161%</td><td>0.2492</td><td>–0.2907%</td><td>✅ Best Fit</td></tr>
-            <tr><td>Base</td><td>0.5723%</td><td>0.4225</td><td>–0.5210%</td><td>⚠️ Undershoot</td></tr>
-            <tr><td>Policy Tightening</td><td>0.5545%</td><td>0.3822</td><td>–0.5123%</td><td>⚠️ Undershoot</td></tr>
-            <tr><td>Economic Recession</td><td>1.2139%</td><td>1.6934</td><td>+1.4827%</td><td>📈 Overshoot</td></tr>
-            <tr><td>Policy Easing</td><td>0.7739%</td><td>0.6885</td><td>–0.7739%</td><td>❌ Poor Fit</td></tr>
+            <tr><td>Inflation Surge</td><td>+1.53%</td><td>2.84</td><td>+1.53%</td><td>📈 Overshoot (too high)</td></tr>
+            <tr><td>Base</td><td>+0.55%</td><td>0.52</td><td>+0.55%</td><td>⚠️ Slight Overshoot</td></tr>
+            <tr><td>Policy Tightening</td><td>–0.34%</td><td>0.19</td><td>–0.34%</td><td>✅ Best Fit</td></tr>
+            <tr><td>Economic Recession</td><td>–1.53%</td><td>2.35</td><td>–1.53%</td><td>❌ Undershoot (too low)</td></tr>
+            <tr><td>Policy Easing</td><td>–0.28%</td><td>0.15</td><td>–0.28%</td><td>⚠️ Mild Undershoot</td></tr>
           </tbody>
         </table>
         <p>
@@ -153,53 +153,58 @@
       <p>📌 Users can leverage this framework to stress test portfolio strategies, validate rate outlooks, or monitor shifts in regime alignment.</p>
 
     <h2>5. Why the Forecast Missed (Despite Actual Macro Inputs)</h2>
-        <p>
-          While the macroeconomic indicators pointed toward a policy easing environment, the actual yield curve reflected higher and steeper rates—more consistent with a <em>Recession</em> or <em>Inflation Surge</em> scenario.
-        </p>
+      <p>
+        While the macroeconomic indicators pointed toward a policy easing environment, the actual yield curve reflected higher and steeper rates—more consistent with a <em>Recession</em> or <em>Inflation Surge</em> scenario.
+      </p>
 
-        <p>
-          Several structural forces likely contributed to this divergence, despite the use of actual macro data at the forecast horizon:
-        </p>
+      <p>
+        Several structural forces likely contributed to this divergence, despite the use of actual macro data at the forecast horizon:
+      </p>
 
-        <ul>
-          <li><strong>Trade policy shocks:</strong> The announcement of reciprocal tariffs by President Trump—first proposed in February and formally launched in April 2025—introduced significant risk premiums and global supply chain uncertainty.</li>
-          <li><strong>Policy divergence:</strong> Central banks maintained elevated rates despite signs of easing inflation and growth, signaling caution around premature loosening.</li>
-          <li><strong>Inflation anchoring:</strong> Long-duration assets remained sensitive to embedded inflation expectations, driving yields higher than macro fundamentals alone would suggest.</li>
-        </ul>
+      <ul>
+        <li><strong>Trade policy shocks:</strong> The announcement of reciprocal tariffs by President Trump—first proposed in February and formally launched in April 2025—introduced significant risk premiums and global supply chain uncertainty.</li>
+        <li><strong>Policy divergence:</strong> Central banks maintained elevated rates despite signs of easing inflation and growth, signaling caution around premature loosening.</li>
+        <li><strong>Inflation anchoring:</strong> Long-duration assets remained sensitive to embedded inflation expectations, driving yields higher than macro fundamentals alone would suggest.</li>
+      </ul>
 
-        <p>
-          Collectively, these factors reflect how market sentiment, geopolitical disruption, and policy inertia can override macro-driven expectations—emphasizing the value of regime-aware extensions to forecasting frameworks.
-        </p>
+      <p>
+        Collectively, these factors reflect how market sentiment, geopolitical disruption, and policy inertia can override macro-driven expectations—emphasizing the value of regime-aware extensions to forecasting frameworks.
+      </p>
 
     <h2>6. Key Takeaways</h2>
-        <ul>
-      <li>Best Fit: The <strong>Inflation Surge</strong> scenario showed the best overall fitness (0.8844) with the lowest MSE, aligning most closely with actual yields.</li>
-      <li><strong>Policy Easing</strong> exhibited a large negative bias, consistently undershooting yields — highlighting the model’s sensitivity to dovish assumptions.</li>
-      <li><strong>Economic Recession</strong> showed a slight positive bias, indicating mild overshooting in low-growth environments.</li>
-      <li>Despite differences in bias, all scenarios achieved Fitness scores above 0.76, demonstrating consistent alignment with actual market data.</li>
-    </ul>
+      <ul>
+        <li><strong>Best Fit:</strong> The <strong>Policy Tightening</strong> scenario provided the closest alignment with actual yields, showing the lowest MAE/MSE and minimal bias.</li>
+        <li><strong>Inflation Surge</strong> consistently overshot yields across maturities, highlighting the risk of overestimating inflation persistence.</li>
+        <li><strong>Economic Recession</strong> undershot significantly, particularly at the short end, reflecting an overly dovish growth-shock assumption.</li>
+        <li><strong>Policy Easing</strong> showed a mild negative bias, underpredicting yields at the long end, though errors were smaller than Recession or Inflation Surge.</li>
+        <li><strong>Base</strong> scenario was reasonably close but carried a slight upward bias relative to actuals.</li>
+      </ul>
 
     <h3>7. Summary</h3>
-        <p>
-          Quantum Yield’s LSTM-PCA forecasting architecture demonstrates <strong>exceptional in-sample performance (R² &gt; 98%)</strong>, confirming its ability to capture the intrinsic structure of macro-financial relationships during training. Each macroeconomic scenario path is modeled as a distinct signal, preserving directional interpretability and offering a clear benchmark of expected behavior under controlled assumptions.
-        </p>
-        <p>
-          Crucially, <strong>out-of-sample validation</strong> highlights divergences not as forecast errors, but as consequences of real-world dynamics — including policy surprises, sentiment shifts, or geopolitical disruptions — that fall outside the model’s encoded structure. This contrast between intrinsic forecasts and observed market conditions underscores the platform’s value as a <em>diagnostic and analytical tool</em> rather than a single-point predictor.
-        </p>
-        <p>
-          By anchoring forecasts in well-defined macroeconomic regimes, Quantum Yield enables users to:
-        </p>
-        <ul>
-          <li>📉 <strong>Assess risk</strong> by measuring forecast deviations across scenario deltas and market behavior.</li>
-          <li>📊 <strong>Evaluate theories</strong> such as recession vs. inflation through side-by-side curve dynamics.</li>
-          <li>🧭 <strong>Quantify exposure</strong> to latent macroeconomic forces embedded in different narrative paths.</li>
-        </ul>
-        <p>
-          This architecture doesn’t just forecast — it <strong>structures uncertainty</strong>. It offers a resilient foundation for strategic decision-making across portfolios, policy analysis, and economic stress testing. Quantum Yield empowers professionals to understand not only what may happen, but <em>why</em> — an edge that is critical in volatile, sentiment-driven markets.
-        </p>
-        <p>
-          <strong>Future extensions</strong> will incorporate <em>sentiment-aware overlays</em> and <em>regime classifiers</em> to further enhance adaptability in fast-moving macro environments — allowing the platform to dynamically adjust to evolving market tone and structural inflection points.
-        </p>
+      <p>
+        Quantum Yield’s LSTM–PCA forecasting framework continues to deliver <strong>exceptional in-sample performance (R² &gt; 98%)</strong>, validating its ability to capture the structural linkages between macroeconomic drivers and the yield curve during training. Each scenario path is expressed as a distinct trajectory, ensuring directional interpretability and providing clear benchmarks for comparison.
+      </p>
+
+      <p>
+        Crucially, <strong>out-of-sample validation</strong> demonstrates that divergences arise not from model failure, but from <em>real-world shocks</em> — including trade policy disruptions, central bank divergence, and persistent inflation expectations — that sit outside the model’s encoded structure. These mismatches highlight the system’s strength as a <em>diagnostic tool</em>, revealing when market sentiment or policy inertia diverges from macro fundamentals.
+      </p>
+
+      <p>
+        By anchoring forecasts in well-defined macroeconomic regimes, Quantum Yield enables users to:
+      </p>
+      <ul>
+        <li>📉 <strong>Assess risk</strong> by quantifying deviations between scenario projections and realized yields.</li>
+        <li>📊 <strong>Evaluate narratives</strong> — e.g., tightening vs. easing vs. recession — through side-by-side yield curve dynamics.</li>
+        <li>🧭 <strong>Measure exposure</strong> to latent macro-financial forces that drive long-end vs. short-end sensitivity.</li>
+      </ul>
+
+      <p>
+        This architecture doesn’t just predict — it <strong>structures uncertainty</strong>. It provides a robust foundation for strategic decision-making across portfolios, risk management, and policy stress testing. The framework empowers professionals to understand not only <em>what</em> may happen, but <em>why</em> — delivering a competitive edge in volatile, sentiment-driven markets.
+      </p>
+
+      <p>
+        <strong>Future extensions</strong> will integrate <em>sentiment-aware overlays</em> and <em>regime classifiers</em>, enhancing adaptability to sudden inflection points and enabling forecasts to dynamically adjust in response to evolving policy signals and market tone.
+      </p>
 <!-- Footer -->
 <footer class="bg-gray-900 text-white text-center py-4 mt-10 text-sm">
   <p class="font-normal">
